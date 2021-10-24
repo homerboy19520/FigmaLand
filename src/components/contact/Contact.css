@@ -1,0 +1,102 @@
+.contact {
+  padding-top: 100px;
+  padding-bottom: 149px;
+  @add-mixin flex space-between, center, column;
+
+  @media (min-width: 767px) {
+    padding-top: 35px;
+  }
+
+  @media (min-width: 767px) {
+    padding-bottom: 85px;
+  }
+
+  &__wrappper {
+    max-width: 318px;
+    margin-bottom: 50px;
+    padding-top: 50px;
+  }
+
+  &__title {
+    @add-mixin font 46px, 400, 57px, $white;
+    text-align: center;
+    letter-spacing: 0.2px;
+    padding: 10px;
+    margin-bottom: 7px;
+  }
+
+  &__text {
+    @add-mixin font 16px, 700, 20px, $white;
+    text-align: center;
+    letter-spacing: 0.2px;
+    padding: 10px;
+  }
+
+  &__container,
+  &__box {
+    @add-mixin flex space-between, center, column;
+  }
+
+  &__container {
+    @media (min-width: 767px) {
+      flex-direction: row-reverse;
+      gap: 65px;
+    }
+  }
+
+  &__box {
+    @media (min-width: 767px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__form {
+    box-sizing: border-box;
+    padding: 130px 35px 52px 35px;
+    background-color: $white;
+    border-radius: 20px;
+    @add-mixin flex space-between, center, column;
+    gap: 45px;
+
+    @media (min-width: 767px) {
+      padding: 79px 41px 26px 41px;
+      min-width: 400px;
+    }
+  }
+
+  &__text-aria {
+    width: 100%;
+    min-height: 193px;
+    border: 1px solid #e8e8e8;
+    padding: 23px 20px;
+    background-color: $beige;
+    outline: none;
+    transition: border-radius 0.2s ease-out;
+    @add-mixin font 15px, 400, 16px, $strBlack;
+    font-family: "Roboto", "Open Sans", "Helvetica Neue", sans-serif;
+    resize: none;
+
+    &:hover {
+      border-radius: 30px;
+    }
+
+    &::placeholder {
+      @add-mixin font 15px, 400, 16px, $strBlack;
+    }
+
+    @media (min-width: 1000px) {
+      padding: 15px 13px;
+      min-width: 400px;
+    }
+  }
+
+  & button {
+    align-self: start;
+  }
+
+  .links {
+    @media (min-width: 767px) {
+      align-self: flex-start;
+    }
+  }
+}

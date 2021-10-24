@@ -1,0 +1,20 @@
+{% from '../svg/svg.html' import svg %}{% macro contacts(modifired="") %}
+<ul class="contacts {{modifired}}">
+  <li class="contacts__item">
+    <div class="contacts__box">{{ svg('contact-geo') }}</div>
+    <a class="contacts__link" href="https://goo.gl/maps/uTMuhSEgQQ6FNfnK9"
+      >6386 Spring St undefined Anchorage, Georgia 12473 United States</a
+    >
+  </li>
+  <li class="contacts__item">
+    <div class="contacts__box">{{ svg('contact-phone') }}</div>
+    <a class="contacts__link" href="tel: +74951234567">+7 (495) 123-45-67</a>
+  </li>
+  <li class="contacts__item">
+    <div class="contacts__box">{{ svg('contact-mail') }}</div>
+    <a class="contacts__link" href="willie.jennings@example.com"
+      >willie.jennings@example.com</a
+    >
+  </li>
+</ul>
+{% endmacro %}

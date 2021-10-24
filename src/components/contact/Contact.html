@@ -1,0 +1,22 @@
+<div class="contact" id="contacts">
+  <div class="contact__wrappper">
+    <h4 class="contact__title">Contact Us</h4>
+    <p class="contact__text">
+      Most calendars are designed for teams. Slate is designed for freelancers
+    </p>
+  </div>
+  <div class="contact__container">
+    <div class="contact__box">
+      {{ links(modifired="") }} {{ contacts(modifired="") }}
+    </div>
+    <form class="contact__form" action="send">
+      {{ input(modifier="input_contact", placeholder="Your Name") }} {{
+      input(modifier="input_contact", placeholder="Your Email") }}
+      <textarea
+        class="contact__text-aria"
+        placeholder="Your Message"
+      ></textarea>
+      {{ button(modifier="button_contact", content="Send") }}
+    </form>
+  </div>
+</div>

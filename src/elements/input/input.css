@@ -1,0 +1,64 @@
+.input {
+  box-sizing: border-box;
+  width: 273px;
+  height: 54px;
+  padding: 19px 39px;
+  border: 1px solid transparent;
+  border-radius: 40px;
+  overflow: visible;
+  @add-mixin font 14px, 400, 16px, $strBlack;
+  letter-spacing: 0.1px;
+  margin-right: 12px;
+  display: none;
+  transition: border-radius 0.2s ease-out;
+
+  &::placeholder {
+    padding: 0;
+    margin: 0;
+    width: fit-content;
+    @add-mixin font 14px, 400, 16px, $strBlack;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus::placeholder {
+    color: $black;
+    font-size: 0;
+  }
+
+  &:hover {
+    border-radius: 10px;
+  }
+
+  @media (min-width: 1000px) {
+    display: block;
+  }
+
+  &_newsletter {
+    display: block;
+    width: 353px;
+    margin: 0 0 12px 0;
+  }
+
+  &_contact {
+    display: block;
+    background-color: $beige;
+    border: 1px solid #e8e8e8;
+    color: $strBlack;
+    margin: 0;
+    width: 100%;
+  }
+
+  &_eror {
+    animation: error 0.4s 1 ease;
+    background-color: #fff3f1;
+    color: $pink;
+    border-color: $pink;
+
+    &::placeholder {
+      color: $pink;
+    }
+  }
+}

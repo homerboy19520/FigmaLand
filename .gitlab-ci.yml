@@ -1,0 +1,19 @@
+stages:
+   - checkout
+   - build
+   - publish
+   - deploy
+
+variables:
+   NODE_IMAGE: git.kodix.ru/kodix/build/node:10.23-alpine
+   DOCKER_IMAGE: git.kodix.ru/kodix/build/docker:stable-git
+   IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
+   REGISTRY_SECRET: $CI_PROJECT_PATH_SLUG-$CI_COMMIT_REF_SLUG-registry
+   RELEASE_NAME: $CI_PROJECT_PATH_SLUG-$CI_COMMIT_REF_SLUG
+
+
+include:
+   - local: .gitlab/pipeline/checkout.yml
+   - local: .gitlab/pipeline/build.yml
+   - local: .gitlab/pipeline/publish.yml
+   - local: .gitlab/pipeline/deploy.yml

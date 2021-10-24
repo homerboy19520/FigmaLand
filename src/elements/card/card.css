@@ -1,0 +1,81 @@
+.price-card {
+  position: relative;
+  width: 335px;
+  height: 310px;
+  padding: 40px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 1px solid #dedede;
+  box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+  margin: 0 auto;
+  @add-mixin flex space-between, flex-start, column;
+  background: linear-gradient(39.97deg, #ef2779 0.79%, #7834be 79.29%);
+  background-position: center -335px;
+  background-repeat: no-repeat;
+  transition: background 0.2s ease-out, color 0.2s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    background-position: 100%;
+
+    .price-card__title,
+    .price-card__description,
+    .price-card__price,
+    .price-card__currency,
+    .price-card__conditions {
+      color: $white;
+    }
+
+    .button_card {
+      background-color: $white;
+      color: $pink;
+      border-color: $pink;
+    }
+  }
+
+  &__title,
+  &__description,
+  &__price,
+  &__currency,
+  &__conditions {
+    transition: color 0.2s ease-out;
+  }
+
+  &__title,
+  &__currency {
+    @add-mixin font 22px, 700, 33px, $black;
+    letter-spacing: 0.1px;
+  }
+
+  &__description,
+  &__conditions {
+    @add-mixin font 12px, 700, 18px, $grey;
+    letter-spacing: 0.2px;
+  }
+
+  &__price {
+    @add-mixin font 55px, 900, 66px, $black;
+    letter-spacing: 0.2px;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__currency,
+  &__conditions {
+    position: absolute;
+    left: 110%;
+    display: block;
+  }
+
+  &__currency {
+    top: 0;
+  }
+
+  &__conditions {
+    bottom: 10px;
+    width: 100%;
+    min-width: 60px;
+  }
+}

@@ -1,0 +1,22 @@
+.links {
+  padding: 10px;
+  @add-mixin flex space-between, center, row;
+  gap: 24px;
+
+  &__img-wrapper,
+  &__link {
+    width: 42px;
+    height: 42px;
+  }
+
+  &__link {
+    cursor: pointer;
+  }
+
+  .svg-contact-linkedin,
+  .svg-contact-twitter,
+  .svg-contact-facebook {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,35 @@
+.partner {
+  @add-mixin flex space-between, center, column;
+  max-width: 220px;
+
+  &__title {
+    @add-mixin font 12px, 700, 17px, $grey;
+    letter-spacing: 0.1px;
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    @add-mixin font 18px, 400, 27px, $grey;
+    letter-spacing: 0.1px;
+    text-align: center;
+  }
+
+  &__box {
+    margin-bottom: 25px;
+  }
+
+  &_partner-4 {
+    @media (min-width: 600px) {
+      display: flex;
+    }
+  }
+
+  &_partner-4,
+  &_partner-5,
+  &_partner-6 {
+    display: none;
+    @media (min-width: 950px) {
+      display: flex;
+    }
+  }
+}

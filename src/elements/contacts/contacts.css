@@ -1,0 +1,43 @@
+.contacts {
+  @add-mixin flex space-beetwen, flex-start, column;
+  max-width: 264px;
+  padding: 18px 0 18px 0;
+  gap: 10px;
+
+  &__item {
+    @add-mixin flex space-beetwen, center, row;
+  }
+
+  &__box {
+    width: fit-content;
+    height: fit-content;
+    @add-mixin flex center, center, row;
+  }
+
+  &__link {
+    @add-mixin font 12px, 700, 18px, $white;
+    letter-spacing: 0.1px;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  &_footer {
+    .contacts__link {
+      color: $grey;
+    }
+  }
+
+  .svg-contact-geo {
+    width: 26px;
+    height: 32px;
+  }
+  .svg-contact-phone {
+    width: 21px;
+    height: 34px;
+  }
+
+  .svg-contact-mail {
+    width: 27px;
+    height: 22px;
+  }
+}

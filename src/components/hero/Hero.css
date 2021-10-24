@@ -1,0 +1,164 @@
+.hero {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+
+  @media (min-width: 767px) {
+    margin-top: 80px;
+    align-items: center;
+  }
+
+  @media (min-width: 1000px) {
+    margin-top: 100px;
+    position: relative;
+    align-items: flex-end;
+  }
+
+  @media (min-width: 1200px) {
+    margin-top: 168px;
+  }
+
+  &__wrapper {
+    width: fit-content;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    @media (min-width: 767px) {
+      align-items: center;
+    }
+
+    @media (min-width: 1000px) {
+      padding-right: 213px;
+      align-items: flex-start;
+    }
+  }
+
+  &__text-wrapper {
+    max-width: 318px;
+    margin-bottom: 60px;
+    @media (min-width: 767px) {
+      max-width: 324px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 1600px) {
+      max-width: 360px;
+    }
+  }
+
+  &__title {
+    @add-mixin font 46px, 400, 57px, $white;
+    text-align: center;
+    margin-bottom: 27px;
+
+    @media (min-width: 767px) {
+      display: none;
+    }
+
+    &_big {
+      @add-mixin font 55px, 900, 65px, $white;
+      display: none;
+      @media (min-width: 767px) {
+        display: block;
+        text-align: start;
+      }
+
+      @media (min-width: 1600px) {
+        font-size: 60px;
+        line-height: 70px;
+      }
+    }
+  }
+
+  &__text {
+    @add-mixin font 16px, 700, 20px, $white;
+    text-align: center;
+
+    @media (min-width: 767px) {
+      text-align: center;
+      letter-spacing: 0.2px;
+    }
+
+    @media (min-width: 1000px) {
+      text-align: start;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+
+  &__screen-wrapper {
+    margin-bottom: 60px;
+  }
+
+  &__screen {
+    border-radius: 5px;
+
+    @media (min-width: 767px) {
+      display: none;
+    }
+
+    &_big {
+      display: none;
+      @media (min-width: 767px) {
+        opacity: 0.6;
+        display: block;
+        position: absolute;
+        height: auto;
+        width: 70%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, 0);
+      }
+
+      @media (min-width: 1000px) {
+        top: -2%;
+        left: 20%;
+        top: 0;
+      }
+
+      @media (min-width: 1350px) {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__button {
+    margin-bottom: 50px;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: inherit;
+    background-color: $blue;
+    border: 1px solid $blue;
+    padding: 16px 58px;
+    border-radius: 35px;
+    transition-property: color, background-color, border;
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
+    @add-mixin font 22px, 700, 33px, $white;
+    text-align: center;
+
+    &:hover {
+      background-color: transparent;
+      border-color: $blue;
+      color: $blue;
+    }
+
+    @media (min-width: 767px) {
+      margin-bottom: 177px;
+    }
+
+    @media (min-width: 1000px) {
+      background-color: $white;
+      color: $blue;
+      border-color: $white;
+    }
+  }
+}

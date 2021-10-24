@@ -1,0 +1,24 @@
+.pricing {
+  margin-bottom: 100px;
+  &__title {
+    @add-mixin font 46px, 400, 57px, $black;
+    text-align: center;
+    letter-spacing: 0.2px;
+    padding: 10px;
+  }
+
+  &__text {
+    @add-mixin font 16px, 700, 20px, $grey;
+    letter-spacing: 0.2px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 80px;
+  }
+
+  &__wrapper {
+    @add-mixin flex space-between, center, row;
+    flex-wrap: wrap;
+    padding: 18px 0 18px 0;
+    gap: 50px;
+  }
+}

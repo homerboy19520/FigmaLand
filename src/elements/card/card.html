@@ -1,0 +1,20 @@
+{% from '../button/button.html' import button %} {% macro card(modifier ="",
+title="", description="", price="", currency="", conditions="") %}
+<div class="price-card {{modifier}}">
+  <span class="price-card__background"></span>
+  <div class="price-card__box">
+    <p class="price-card__title">{{title}}</p>
+    <p class="price-card__description">{{description}}</p>
+  </div>
+
+  <div class="price-card__wrapper">
+    <p class="price-card__price">{{price}}</p>
+    <span class="price-card__currency">{{currency}}</span>
+    <span class="price-card__conditions">{{conditions}}</span>
+  </div>
+
+  <div class="price-card__wrapper">
+    {{ button(modifier="button_card", content="Order Now", href="#contacts")}}
+  </div>
+</div>
+{% endmacro %}

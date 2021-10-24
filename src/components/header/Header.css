@@ -1,0 +1,262 @@
+.header {
+  $root: &;
+
+  &__nav-wrapper {
+    position: fixed;
+    left: 100%;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    z-index: 1;
+    transition: left 0.2s ease-out;
+    cursor: pointer;
+    display: block;
+
+    &_open {
+      left: 0;
+    }
+
+    @media (min-width: 767px) {
+      @add-mixin flex space-between, center, row;
+      position: initial;
+      width: auto;
+      background-color: transparent;
+      opacity: 1;
+    }
+
+    @media (min-width: 1000px) {
+      margin-right: 44px;
+    }
+  }
+
+  &__box {
+    display: none;
+    @media (min-width: 1000px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    height: 100%;
+    left: 100%;
+    position: absolute;
+    top: 0;
+    background-color: $white;
+    transition: left 0.2s ease-out;
+
+    @media (min-width: 767px) {
+      @add-mixin flex space-between, center, row;
+      margin-bottom: 0;
+      margin-right: 44px;
+      position: inherit;
+      background-color: transparent;
+    }
+
+    &.m-open {
+      left: 0;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 40px;
+
+    &:first-child {
+      margin-top: 112px;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 767px) {
+      margin-right: 41px;
+      margin-bottom: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:first-child {
+        margin: 0 41px 0 0;
+      }
+    }
+  }
+
+  &__nav-item {
+    @add-mixin font 40px, 400, 50px, $black;
+    text-align: center;
+    transition: opacity 0.2s ease-out, color 0.2s ease-out, color 0.2s ease-out,
+      color 0.2s ease-out;
+    opacity: 0.7;
+
+    &:hover {
+      color: $pink;
+    }
+
+    &:active {
+      opacity: 0;
+    }
+
+    @media (min-width: 767px) {
+      @add-mixin font 15px, 400, 27px, $white;
+      opacity: 1;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &:active {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 0 17px 0;
+    margin-bottom: 80px;
+    position: inherit;
+
+    @media (min-width: 767px) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__burger-wrapper {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__burger {
+    z-index: 1;
+    cursor: pointer;
+    @media (min-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+    @media (min-width: 767px) {
+      display: block;
+    }
+  }
+
+  .svg-header-svg {
+    width: 40px;
+    height: 32px;
+    transition: fill 0.2s ease-out;
+
+    &_black {
+      fill: $black;
+    }
+  }
+
+  &__input {
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    width: 273px;
+    height: 54px;
+    padding: 19px 39px;
+    border: 1px solid transparent;
+    border-radius: 39px;
+    overflow: visible;
+    @add-mixin font 14px, 400, 16px, $strBlack;
+    letter-spacing: 0.1px;
+    margin-right: 12px;
+    display: none;
+    transition: border-radius 0.2s ease-out, background-color 0.2s ease-out,
+      color 0.2s ease-out, border-color 0.2s ease-out;
+
+    &::placeholder {
+      padding: 0;
+      margin: 0;
+      width: fit-content;
+      @add-mixin font 14px, 400, 16px, $strBlack;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus::placeholder {
+      color: $black;
+      font-size: 0;
+    }
+
+    &:hover {
+      border-radius: 10px;
+    }
+
+    @media (min-width: 1000px) {
+      display: block;
+    }
+
+    &_eror {
+      animation: error 0.4s 1 ease;
+      background-color: #fff3f1;
+      color: $pink;
+      border-color: $pink;
+
+      &::placeholder {
+        color: $pink;
+      }
+    }
+  }
+
+  &__button {
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: inherit;
+    background-color: $white;
+    border: 1px solid transparent;
+    padding: 19px 38px;
+    border-radius: 35px;
+    transition-property: color, background-color, border, border-radius, opacity;
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
+    @add-mixin font 16px, 500, 16px, $pink;
+    letter-spacing: 0.2px;
+    text-align: center;
+    display: none;
+
+    &:hover {
+      background-color: transparent;
+      border-color: $pink;
+      color: $white;
+      border-radius: 10px;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    @media (min-width: 1200px) {
+      display: block;
+    }
+  }
+}
+@keyframes error {
+  0% {
+    padding: 19px 38px;
+  }
+
+  50% {
+    padding: 19px 60px;
+  }
+
+  100% {
+    padding: 19px 38px;
+  }
+}

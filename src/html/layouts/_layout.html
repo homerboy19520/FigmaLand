@@ -1,0 +1,28 @@
+{% import "../helpers/_mixins.html" as mixins %} {% from els.button import
+button %} {% from els.input import input %} {% from els.partner import partner
+%} {% from els.testimonial import testimonial %} {% from els.card import card %}
+{% from els.links import links %} {% from els.svg import svg %} {% from
+els.contacts import contacts %}
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      {% if pages[page].title %}{{ pages[page].title }} {% else %}Template{%
+      endif %}
+    </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" media="all" href="css/vendors.css" />
+    <link rel="stylesheet" media="all" href="css/app.css" />
+    {# {% include "../_mixins/_media-tags.html" %} #}
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+    <script src="js/vendors.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
