@@ -1,8 +1,5 @@
 .DS_Store
 */.DS_Store
-build/*
-/build
-build
 node_modules/*
 /node_modules
 node_modules
