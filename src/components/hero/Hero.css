@@ -42,7 +42,7 @@
     margin-bottom: 60px;
     @media (min-width: 767px) {
       max-width: 324px;
-      margin-bottom: 0;
+      margin-bottom: 60px;
     }
 
     @media (min-width: 1600px) {
@@ -95,38 +95,39 @@
 
   &__screen-wrapper {
     margin-bottom: 60px;
+    @media (min-width: 767px) {
+      opacity: 0.6;
+      display: block;
+      position: absolute;
+      height: auto;
+      width: 65%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    @media (min-width: 1000px) {
+      left: 10%;
+      top: -25%;
+      width: 100%;
+    }
+
+    @media (min-width: 1160px) {
+      opacity: 1;
+    }
+
+    @media (min-width: 1350px) {
+      width: 100%;
+      height: auto;
+      left: 15%;
+      top: -40%;
+    }
   }
 
   &__screen {
     border-radius: 5px;
-
-    @media (min-width: 767px) {
-      display: none;
-    }
-
-    &_big {
-      display: none;
-      @media (min-width: 767px) {
-        opacity: 0.6;
-        display: block;
-        position: absolute;
-        height: auto;
-        width: 70%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, 0);
-      }
-
-      @media (min-width: 1000px) {
-        top: -2%;
-        left: 20%;
-        top: 0;
-      }
-
-      @media (min-width: 1350px) {
-        opacity: 1;
-      }
-    }
+    width: 100%;
+    height: auto;
   }
 
   &__button {

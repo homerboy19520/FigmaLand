@@ -11,6 +11,7 @@
 
   &__link {
     cursor: pointer;
+    display: block;
   }
 
   .svg-contact-linkedin,

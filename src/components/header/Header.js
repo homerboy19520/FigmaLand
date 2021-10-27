@@ -4,7 +4,7 @@ const headerIcon = document.querySelector(".svg-header-svg");
 const body = document.querySelector("body");
 
 if (burgerIcon) {
-  burgerIcon.addEventListener("click", () => {
+  headerIcon.addEventListener("click", () => {
     burgerWindow.classList.toggle("m-open");
     body.classList.toggle("body_hidden");
     headerIcon.classList.toggle("svg-header-svg_black");
