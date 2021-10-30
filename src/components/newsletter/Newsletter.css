@@ -47,5 +47,11 @@
 
   &__form {
     @add-mixin flex space-between, center, column;
+    max-width: 353px;
+    margin: 0 auto;
+  }
+
+  input {
+    margin-bottom: 12px;
   }
 }

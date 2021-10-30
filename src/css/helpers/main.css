@@ -8,6 +8,11 @@ body {
   scroll-behavior: smooth;
 }
 
+img {
+  user-select: none;
+  pointer-events: none;
+}
+
 .body {
   &_hidden {
     overflow: hidden;
@@ -57,6 +62,7 @@ button {
     background-size: cover;
     width: 100%;
     padding: 0;
+    max-width: none;
   }
 
   &_footer {

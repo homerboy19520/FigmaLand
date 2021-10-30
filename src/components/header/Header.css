@@ -212,6 +212,16 @@
         color: $pink;
       }
     }
+
+    &_valid {
+      background-color: #71d171;
+      color: $white;
+      border-color: #71d171;
+
+      &::placeholder {
+        color: $white;
+      }
+    }
   }
 
   &__button {

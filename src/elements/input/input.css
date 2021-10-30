@@ -1,16 +1,16 @@
 .input {
   box-sizing: border-box;
-  width: 273px;
+  border: 1px solid transparent;
+  width: 100%;
   height: 54px;
   padding: 19px 39px;
   border: 1px solid transparent;
-  border-radius: 40px;
+  border-radius: 39px;
   overflow: visible;
   @add-mixin font 14px, 400, 16px, $strBlack;
   letter-spacing: 0.1px;
-  margin-right: 12px;
-  display: none;
-  transition: border-radius 0.2s ease-out;
+  transition: border-radius 0.2s ease-out, background-color 0.2s ease-out,
+    color 0.2s ease-out, border-color 0.2s ease-out;
 
   &::placeholder {
     padding: 0;
@@ -32,25 +32,6 @@
     border-radius: 10px;
   }
 
-  @media (min-width: 1000px) {
-    display: block;
-  }
-
-  &_newsletter {
-    display: block;
-    width: 353px;
-    margin: 0 0 12px 0;
-  }
-
-  &_contact {
-    display: block;
-    background-color: $beige;
-    border: 1px solid #e8e8e8;
-    color: $strBlack;
-    margin: 0;
-    width: 100%;
-  }
-
   &_eror {
     animation: error 0.4s 1 ease;
     background-color: #fff3f1;
@@ -60,5 +41,20 @@
     &::placeholder {
       color: $pink;
     }
+  }
+
+  &_valid {
+    background-color: #71d171;
+    color: $white;
+    border-color: #71d171;
+
+    &::placeholder {
+      color: $white;
+    }
+  }
+
+  &_contact {
+    background-color: #f5f5f5;
+    border: 1px solid #e8e8e8;
   }
 }
