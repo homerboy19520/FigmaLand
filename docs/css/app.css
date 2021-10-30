@@ -75,6 +75,14 @@ body {
   scroll-behavior: smooth;
 }
 
+img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
 .body_hidden {
     overflow: hidden;
   }
@@ -116,6 +124,7 @@ button {
     background-size: cover;
     width: 100%;
     padding: 0;
+    max-width: none;
 }
 
 .wrapper_footer {
@@ -471,22 +480,21 @@ button {
 .input {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 273px;
+  border: 1px solid transparent;
+  width: 100%;
   height: 54px;
   padding: 19px 39px;
   border: 1px solid transparent;
-  border-radius: 40px;
+  border-radius: 39px;
   overflow: visible;
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
   color: #18171d;
   letter-spacing: 0.1px;
-  margin-right: 12px;
-  display: none;
-  -webkit-transition: border-radius 0.2s ease-out;
-  -o-transition: border-radius 0.2s ease-out;
-  transition: border-radius 0.2s ease-out
+  -webkit-transition: border-radius 0.2s ease-out, background-color 0.2s ease-out, color 0.2s ease-out, border-color 0.2s ease-out;
+  -o-transition: border-radius 0.2s ease-out, background-color 0.2s ease-out, color 0.2s ease-out, border-color 0.2s ease-out;
+  transition: border-radius 0.2s ease-out, background-color 0.2s ease-out, color 0.2s ease-out, border-color 0.2s ease-out
 }
 
 .input::-webkit-input-placeholder {
@@ -561,21 +569,6 @@ button {
   border-radius: 10px;
 }
 
-.input_newsletter {
-    display: block;
-    width: 353px;
-    margin: 0 0 12px 0;
-}
-
-.input_contact {
-    display: block;
-    background-color: #f5f5f5;
-    border: 1px solid #e8e8e8;
-    color: #18171d;
-    margin: 0;
-    width: 100%;
-}
-
 .input_eror {
     -webkit-animation: error 0.4s 1 ease;
     animation: error 0.4s 1 ease;
@@ -598,6 +591,33 @@ button {
 
 .input_eror::placeholder {
   color: #ef2779;
+}
+
+.input_valid {
+    background-color: #71d171;
+    color: #fff;
+    border-color: #71d171;
+}
+
+.input_valid::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.input_valid::-moz-placeholder {
+  color: #fff;
+}
+
+.input_valid::-ms-input-placeholder {
+  color: #fff;
+}
+
+.input_valid::placeholder {
+  color: #fff;
+}
+
+.input_contact {
+    background-color: #f5f5f5;
+    border: 1px solid #e8e8e8;
 }
 
 .links {
@@ -1319,6 +1339,28 @@ button {
   color: #ef2779;
 }
 
+.header__input_valid {
+      background-color: #71d171;
+      color: #fff;
+      border-color: #71d171;
+}
+
+.header__input_valid::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.header__input_valid::-moz-placeholder {
+  color: #fff;
+}
+
+.header__input_valid::-ms-input-placeholder {
+  color: #fff;
+}
+
+.header__input_valid::placeholder {
+  color: #fff;
+}
+
 .header__button {
     position: relative;
     -webkit-box-sizing: border-box;
@@ -1547,6 +1589,12 @@ button {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    max-width: 353px;
+    margin: 0 auto;
+}
+
+.newsletter input {
+    margin-bottom: 12px;
 }
 
 .partners {
@@ -2059,10 +2107,6 @@ button {
     background-color: #38a3f1;
     color: #fff;
     border-color: #38a3f1;
-  }
-
-  .input {
-    display: block;
   }
 
   .testimonial__wrapper {
