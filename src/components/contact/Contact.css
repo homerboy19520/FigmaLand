@@ -1,6 +1,8 @@
 .contact {
   padding-top: 100px;
   padding-bottom: 149px;
+  max-width: 730px;
+  margin: 0 auto;
   @add-mixin flex space-between, center, column;
 
   @media (min-width: 767px) {
@@ -12,7 +14,7 @@
   }
 
   &__wrappper {
-    max-width: 318px;
+    width: 80%;
     margin-bottom: 50px;
     padding-top: 50px;
   }
@@ -38,13 +40,18 @@
   }
 
   &__container {
+    width: 80%;
+    max-width: 400px;
+    gap: 50px;
     @media (min-width: 767px) {
       flex-direction: row-reverse;
       gap: 65px;
+      max-width: none;
     }
   }
 
   &__box {
+    gap: 50px;
     @media (min-width: 767px) {
       flex-direction: column-reverse;
     }
@@ -57,10 +64,14 @@
     border-radius: 20px;
     @add-mixin flex space-between, center, column;
     gap: 45px;
+    min-width: 378px;
+    width: 100%;
+    max-width: 400px;
 
     @media (min-width: 767px) {
       padding: 79px 41px 26px 41px;
-      min-width: 400px;
+      max-width: 400px;
+      gap: 31px;
     }
   }
 
@@ -71,22 +82,22 @@
     padding: 23px 20px;
     background-color: $beige;
     outline: none;
-    transition: border-radius 0.2s ease-out;
+    transition: border-radius 0.2s ease-out, font-size 0.2s ease-out;
     @add-mixin font 15px, 400, 16px, $strBlack;
     font-family: "Roboto", "Open Sans", "Helvetica Neue", sans-serif;
     resize: none;
-
-    &:hover {
-      border-radius: 30px;
-    }
 
     &::placeholder {
       @add-mixin font 15px, 400, 16px, $strBlack;
     }
 
+    &:focus::placeholder {
+      color: $black;
+      font-size: 0;
+    }
+
     @media (min-width: 1000px) {
-      padding: 15px 13px;
-      min-width: 400px;
+      padding: 14px 13px;
     }
   }
 

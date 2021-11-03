@@ -32,7 +32,7 @@
 
   &__box {
     display: none;
-    @media (min-width: 1000px) {
+    @media (min-width: 1150px) {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -51,9 +51,13 @@
     @media (min-width: 767px) {
       @add-mixin flex space-between, center, row;
       margin-bottom: 0;
-      margin-right: 44px;
+      margin-right: 0;
       position: inherit;
       background-color: transparent;
+    }
+
+    @media (min-width: 1150px) {
+      margin-right: 44px;
     }
 
     &.m-open {
@@ -174,7 +178,6 @@
     @add-mixin font 14px, 400, 16px, $strBlack;
     letter-spacing: 0.1px;
     margin-right: 12px;
-    display: none;
     transition: border-radius 0.2s ease-out, background-color 0.2s ease-out,
       color 0.2s ease-out, border-color 0.2s ease-out;
 
@@ -196,10 +199,6 @@
 
     &:hover {
       border-radius: 10px;
-    }
-
-    @media (min-width: 1000px) {
-      display: block;
     }
 
     &_eror {
@@ -239,7 +238,6 @@
     @add-mixin font 16px, 500, 16px, $pink;
     letter-spacing: 0.2px;
     text-align: center;
-    display: none;
 
     &:hover {
       background-color: transparent;

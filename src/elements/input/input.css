@@ -56,5 +56,10 @@
   &_contact {
     background-color: #f5f5f5;
     border: 1px solid #e8e8e8;
+    padding: 13px 14px;
+
+    &:hover {
+      border-radius: 39px;
+    }
   }
 }

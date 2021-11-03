@@ -45,8 +45,7 @@
   }
 
   &_contact {
-    width: 145px;
-    height: 52px;
+    padding: 18px 64px;
     margin: 0;
 
     @media (min-width: 767px) {
@@ -54,6 +53,9 @@
     }
 
     @media (min-width: 1000px) {
+      @add-mixin font 11px, 500, 11px, $white;
+      padding: 12px 35px;
+      letter-spacing: 0.13px;
       background-color: $pink;
       color: $white;
       border-color: $pink;
@@ -63,6 +65,17 @@
   &_newsletter {
     margin-bottom: 114px;
     width: 353px;
+    transition-property: box-shadow;
+
+    &:hover {
+      background-color: $pink;
+      color: $white;
+      box-shadow: 0px 12px 3px rgb(0 0 0 / 10%);
+    }
+
+    &:active {
+      box-shadow: 0px 10px 23px rgba(0, 0, 0, 0.12);
+    }
 
     @media (min-width: 767px) {
       margin-bottom: 114px;

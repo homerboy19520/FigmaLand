@@ -43,6 +43,7 @@ button {
     @media (min-width: 1200px) {
       padding: 0 40px 0 40px;
       height: 100vh;
+      min-height: 800px;
     }
 
     @media (min-width: 767px) {

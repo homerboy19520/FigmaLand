@@ -22,6 +22,12 @@
   }
 
   &_footer {
+    padding: 0;
+    order: -1;
+
+    @media (min-width: 900px) {
+      order: 0;
+    }
     .contacts__link {
       color: $grey;
     }

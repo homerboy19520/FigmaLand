@@ -20,4 +20,14 @@
     width: 100%;
     height: 100%;
   }
+
+  &_footer {
+    padding: 7px 4px;
+    align-self: flex-start;
+    order: 0;
+
+    @media (min-width: 900px) {
+      order: -1;
+    }
+  }
 }
