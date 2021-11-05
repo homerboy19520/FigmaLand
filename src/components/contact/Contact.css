@@ -96,6 +96,15 @@
       font-size: 0;
     }
 
+    @media (min-width: 767px) {
+      @add-mixin font 10px, 400, 10px, $strBlack;
+      letter-spacing: 0.07px;
+
+      &::placeholder {
+        @add-mixin font 10px, 400, 10px, $strBlack;
+      }
+    }
+
     @media (min-width: 1000px) {
       padding: 14px 13px;
     }

@@ -1952,6 +1952,42 @@ button {
     margin-bottom: 0;
   }
 
+  .input_contact {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 10px;
+    color: #18171d;
+    letter-spacing: 0.07px;
+  }
+
+  .input_contact::-webkit-input-placeholder {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 10px;
+    color: #18171d;
+  }
+
+  .input_contact::-moz-placeholder {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 10px;
+    color: #18171d;
+  }
+
+  .input_contact::-ms-input-placeholder {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 10px;
+    color: #18171d;
+  }
+
+  .input_contact::placeholder {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 10px;
+    color: #18171d;
+  }
+
   .contact {
     padding-top: 35px;
   }
@@ -1980,6 +2016,42 @@ button {
     padding: 79px 41px 26px 41px;
     max-width: 400px;
     gap: 31px;
+  }
+
+  .contact__text-aria {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 10px;
+    color: #18171d;
+    letter-spacing: 0.07px;
+  }
+
+  .contact__text-aria::-webkit-input-placeholder {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 10px;
+    color: #18171d;
+  }
+
+  .contact__text-aria::-moz-placeholder {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 10px;
+    color: #18171d;
+  }
+
+  .contact__text-aria::-ms-input-placeholder {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 10px;
+    color: #18171d;
+  }
+
+  .contact__text-aria::placeholder {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 10px;
+    color: #18171d;
   }
 
   .contact .links {
@@ -2298,10 +2370,10 @@ button {
   }
 
   .hero__screen-wrapper {
-    width: 100%;
+    width: 900px;
     height: auto;
-    left: 10%;
-    top: -25%;
+    left: 60px;
+    top: -59px;
   }
 
   .hero__button {
@@ -2376,6 +2448,10 @@ button {
   .header__list {
     margin-right: 44px;
   }
+
+  .hero__screen-wrapper {
+    left: 230px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -2395,11 +2471,10 @@ button {
   }
 }
 
-@media (min-width: 1380px) {
+@media (min-width: 1400px) {
 
   .hero__screen-wrapper {
     opacity: 1;
-    left: 15%;
   }
 }
 

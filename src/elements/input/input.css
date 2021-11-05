@@ -61,5 +61,14 @@
     &:hover {
       border-radius: 39px;
     }
+
+    @media (min-width: 767px) {
+      @add-mixin font 10px, 400, 10px, $strBlack;
+      letter-spacing: 0.07px;
+
+      &::placeholder {
+        @add-mixin font 10px, 400, 10px, $strBlack;
+      }
+    }
   }
 }
