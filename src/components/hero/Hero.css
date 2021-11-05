@@ -95,6 +95,7 @@
 
   &__screen-wrapper {
     margin-bottom: 60px;
+
     @media (min-width: 767px) {
       opacity: 0.6;
       display: block;
@@ -108,7 +109,7 @@
 
     @media (min-width: 1000px) {
       width: 900px;
-      height: auto;
+      height: 503px;
       left: 60px;
       top: -59px;
     }
@@ -126,6 +127,17 @@
     border-radius: 5px;
     width: 100%;
     height: auto;
+    box-shadow: 0px 9px 19px rgba(0, 0, 0, 0.16),
+      0px 9px 131px rgba(0, 0, 0, 0.23);
+
+    @media (min-width: 767px) {
+      box-shadow: none;
+    }
+
+    @media (min-width: 1400px) {
+      box-shadow: 0px 9px 19px rgba(0, 0, 0, 0.16),
+        0px 9px 131px rgba(0, 0, 0, 0.23);
+    }
   }
 
   &__button {
