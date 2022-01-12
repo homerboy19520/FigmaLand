@@ -1,0 +1,5 @@
+{% macro svg(i) %}
+<svg class="svg svg-{{i}}">
+  <use xlink:href="images/svg.svg#svg-{{i}}"></use>
+</svg>
+{% endmacro %}

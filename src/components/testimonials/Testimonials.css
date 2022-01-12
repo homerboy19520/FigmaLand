@@ -1,0 +1,51 @@
+.testimonials {
+  padding-top: 110px;
+  margin-bottom: 80px;
+  &__title {
+    @add-mixin font 46px, 400, 57px, $black;
+    letter-spacing: 0.2px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 90px;
+  }
+
+  &__main,
+  &__container {
+    @add-mixin flex space-between, center, column;
+    padding: 15px 0 15px 0;
+  }
+
+  &__main {
+    padding: 15px 0 15px 0;
+
+    @media (min-width: 1000px) {
+      padding-bottom: 80px;
+    }
+  }
+
+  &__wrapper {
+    width: fit-content;
+    margin-bottom: 45px;
+
+    @media (min-width: 1000px) {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__text {
+    @add-mixin font 14px, 700, 17px, $grey;
+    letter-spacing: 0.16px;
+    max-width: 300px;
+    padding: 9px;
+    margin-bottom: 45px;
+    text-align: center;
+
+    @media (min-width: 762px) {
+      max-width: 703px;
+    }
+
+    @media (min-width: 1000px) {
+      padding-bottom: 50px;
+    }
+  }
+}

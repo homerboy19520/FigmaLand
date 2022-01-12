@@ -1,0 +1,27 @@
+{% extends "src/html/layouts/_layout.html" %} {% set page = 'home' %} {% block
+content %}
+<div class="wrapper wrapper_header">
+  <div class="wrapper">
+    {% include Header %} {% include Hero %}
+  </div>
+</div>
+<div class="wrapper">
+  {% include Features %}
+</div>
+{% include Prototyping %}
+<div class="wrapper wrapper_newsletter">
+  <div class="wrapper">
+    {% include Newsletter %}
+  </div>
+</div>
+<div class="wrapper">
+  {% include Partners %} {% include Testimonials %} {% include Pricing %}
+</div>
+<div class="wrapper wrapper_contacts">
+  {%include Contact %}
+</div>
+
+<div class="wrapper wrapper_footer">
+  {%include Footer %}
+</div>
+{% endblock %}

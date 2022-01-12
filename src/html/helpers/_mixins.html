@@ -1,0 +1,16 @@
+{% macro svg(i) %}
+  <svg class="svg svg-{{i}}">
+    <use xlink:href="images/svg.svg#svg-{{i}}"></use>
+  </svg>
+{% endmacro %}
+
+{% macro back(text, class) %}
+  <a href="#" class="page-link-back{% if class %} {{ class }}{% endif %}">
+    <span class="page-link-back__icon">
+      {% call svg('arrow-left') %}{%- endcall %}
+    </span>
+    <span class="page-link-back__text page-text">
+      {{ text }}
+    </span>
+  </a>
+{% endmacro %}

@@ -1,0 +1,125 @@
+.features {
+  padding-top: 40px;
+  margin-bottom: 98px;
+
+  @media (min-width: 500px) {
+    padding-top: 48px;
+  }
+
+  @media (min-width: 1000px) {
+    margin-bottom: 90px;
+    padding-top: 80px;
+  }
+
+  &__header {
+    max-width: 318px;
+    margin: 0 auto;
+    margin-bottom: 68px;
+
+    @media (min-width: 1000px) {
+      margin-bottom: 100px;
+    }
+  }
+
+  & span {
+    display: block;
+    text-align: center;
+    margin-bottom: 17px;
+  }
+
+  &__title {
+    @add-mixin font 46px, 400, 57px, $black;
+    letter-spacing: 0.2px;
+    text-align: center;
+    margin-bottom: 27px;
+  }
+
+  &__text {
+    @add-mixin font 22px, 700, 33px, $black;
+    letter-spacing: 0.1px;
+  }
+
+  &__subtitle {
+    @add-mixin font 17px, 600, 20px, $grey;
+    letter-spacing: 0.2px;
+    text-align: center;
+  }
+
+  &__description {
+    @add-mixin font 18px, 400, 27px, $grey;
+    letter-spacing: 0.2px;
+    padding: 10px 0 10px 0;
+  }
+
+  &__list {
+    max-width: 255px;
+    margin: 0 auto;
+
+    @media (min-width: 500px) {
+      max-width: inherit;
+    }
+
+    @media (min-width: 1000px) {
+      max-width: 869px;
+      @add-mixin flex space-between, center, row;
+    }
+  }
+
+  &__item {
+    text-align: start;
+    margin: 0 auto;
+    margin-bottom: 75px;
+
+    @media (min-width: 500px) {
+      width: 430px;
+    }
+
+    @media (min-width: 1000px) {
+      width: inherit;
+      max-width: 255px;
+      margin: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    & h5 {
+      max-width: 207px;
+      padding: 10px;
+
+      @media (min-width: 500px) {
+        max-width: inherit;
+      }
+
+      @media (min-width: 1000px) {
+        max-width: 207px;
+      }
+    }
+  }
+
+  &__box {
+    @add-mixin flex space-between, center, row;
+
+    @media (min-width: 500px) {
+      @add-mixin flex flex-start, center, row;
+    }
+
+    @media (min-width: 1000px) {
+      @add-mixin flex space-between, center, row;
+    }
+  }
+
+  &__icon-box {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    @add-mixin flex center, center, row;
+    background-color: $pink;
+  }
+
+  & .svg-features-icon {
+    width: 17px;
+    height: 17px;
+  }
+}

@@ -1,0 +1,36 @@
+.partners {
+  padding-top: 100px;
+  @add-mixin flex space-between, center, column;
+  margin-bottom: 50px;
+
+  &__header {
+    margin-bottom: 110px;
+    max-width: 298px;
+  }
+
+  &__title {
+    @add-mixin font 46px, 400, 57px, $black;
+    margin-bottom: 27px;
+    text-align: center;
+  }
+
+  &__text {
+    @add-mixin font 16px, 700, 20px, $grey;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+    margin-bottom: 108px;
+
+    @media (min-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 950px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

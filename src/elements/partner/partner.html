@@ -1,0 +1,9 @@
+{% macro partner(modifier="", name="",src="",alt="",content="") %}
+<li class="partner {{modifier}}">
+  <h5 class="partner__title">{{name}}</h5>
+  <div class="partner__box">
+    <img src="{{src}}" alt="{{alt}}" />
+  </div>
+  <p class="partner__text">{{content}}</p>
+</li>
+{% endmacro %}

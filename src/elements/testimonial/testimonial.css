@@ -1,0 +1,33 @@
+.testimonial {
+  $root: &;
+  @add-mixin flex flex-start, center, row;
+  max-width: 300px;
+  &__wrapper {
+    min-width: 44px;
+    width: 44px;
+    background-size: contain;
+    margin-right: 11px;
+
+    @media (min-width: 1000px) {
+      min-width: 50px;
+      width: 50px;
+    }
+  }
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__name {
+    @add-mixin font 11px, 700, 16px, $grey;
+    letter-spacing: 0.08px;
+    padding: 1.7px 0 1.7px 0;
+    margin-bottom: 2px;
+  }
+
+  &__text {
+    @add-mixin font 13px, 400, 23px, $black;
+    letter-spacing: 0.16px;
+  }
+}

@@ -1,0 +1,122 @@
+.contact {
+  padding-top: 100px;
+  padding-bottom: 149px;
+  max-width: 730px;
+  margin: 0 auto;
+  @add-mixin flex space-between, center, column;
+
+  @media (min-width: 767px) {
+    padding-top: 35px;
+  }
+
+  @media (min-width: 767px) {
+    padding-bottom: 85px;
+  }
+
+  &__wrappper {
+    width: 80%;
+    margin-bottom: 50px;
+    padding-top: 50px;
+  }
+
+  &__title {
+    @add-mixin font 46px, 400, 57px, $white;
+    text-align: center;
+    letter-spacing: 0.2px;
+    padding: 10px;
+    margin-bottom: 7px;
+  }
+
+  &__text {
+    @add-mixin font 16px, 700, 20px, $white;
+    text-align: center;
+    letter-spacing: 0.2px;
+    padding: 10px;
+  }
+
+  &__container,
+  &__box {
+    @add-mixin flex space-between, center, column;
+  }
+
+  &__container {
+    width: 80%;
+    max-width: 400px;
+    gap: 50px;
+    @media (min-width: 767px) {
+      flex-direction: row-reverse;
+      gap: 65px;
+      max-width: none;
+    }
+  }
+
+  &__box {
+    gap: 50px;
+    @media (min-width: 767px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__form {
+    box-sizing: border-box;
+    padding: 130px 35px 52px 35px;
+    background-color: $white;
+    border-radius: 20px;
+    @add-mixin flex space-between, center, column;
+    gap: 45px;
+    min-width: 378px;
+    width: 100%;
+    max-width: 400px;
+
+    @media (min-width: 767px) {
+      padding: 79px 41px 26px 41px;
+      max-width: 400px;
+      gap: 31px;
+    }
+  }
+
+  &__text-aria {
+    width: 100%;
+    min-height: 193px;
+    border: 1px solid #e8e8e8;
+    padding: 23px 20px;
+    background-color: $beige;
+    outline: none;
+    transition: border-radius 0.2s ease-out, font-size 0.2s ease-out;
+    @add-mixin font 15px, 400, 16px, $strBlack;
+    font-family: "Roboto", "Open Sans", "Helvetica Neue", sans-serif;
+    resize: none;
+
+    &::placeholder {
+      @add-mixin font 15px, 400, 16px, $strBlack;
+    }
+
+    &:focus::placeholder {
+      color: $black;
+      font-size: 0;
+    }
+
+    @media (min-width: 767px) {
+      @add-mixin font 10px, 400, 10px, $strBlack;
+      letter-spacing: 0.07px;
+
+      &::placeholder {
+        @add-mixin font 10px, 400, 10px, $strBlack;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      padding: 14px 13px;
+    }
+  }
+
+  & button {
+    align-self: start;
+  }
+
+  .links {
+    @media (min-width: 767px) {
+      align-self: flex-start;
+    }
+  }
+}

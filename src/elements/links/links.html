@@ -1,0 +1,13 @@
+{% from '../svg/svg.html' import svg %} {% macro links(modifired="") %}
+<div class="links {{modifired}}">
+  <div class="links__img-wrapper">
+    <a href="#" class="links__link">{{ svg('contact-twitter') }}</a>
+  </div>
+  <div class="links__img-wrapper">
+    <a href="#" class="links__link">{{ svg('contact-facebook') }}</a>
+  </div>
+  <div class="links__img-wrapper">
+    <a href="#" class="links__link">{{ svg('contact-linkedin') }}</a>
+  </div>
+</div>
+{% endmacro %}

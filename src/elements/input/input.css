@@ -1,0 +1,74 @@
+.input {
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  width: 100%;
+  height: 54px;
+  padding: 19px 39px;
+  border: 1px solid transparent;
+  border-radius: 39px;
+  overflow: visible;
+  @add-mixin font 14px, 400, 16px, $strBlack;
+  letter-spacing: 0.1px;
+  transition: border-radius 0.2s ease-out, background-color 0.2s ease-out,
+    color 0.2s ease-out, border-color 0.2s ease-out;
+
+  &::placeholder {
+    padding: 0;
+    margin: 0;
+    width: fit-content;
+    @add-mixin font 14px, 400, 16px, $strBlack;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus::placeholder {
+    color: $black;
+    font-size: 0;
+  }
+
+  &:hover {
+    border-radius: 10px;
+  }
+
+  &_eror {
+    animation: error 0.4s 1 ease;
+    background-color: #fff3f1;
+    color: $pink;
+    border-color: $pink;
+
+    &::placeholder {
+      color: $pink;
+    }
+  }
+
+  &_valid {
+    background-color: #71d171;
+    color: $white;
+    border-color: #71d171;
+
+    &::placeholder {
+      color: $white;
+    }
+  }
+
+  &_contact {
+    background-color: #f5f5f5;
+    border: 1px solid #e8e8e8;
+    padding: 13px 14px;
+
+    &:hover {
+      border-radius: 39px;
+    }
+
+    @media (min-width: 767px) {
+      @add-mixin font 10px, 400, 10px, $strBlack;
+      letter-spacing: 0.07px;
+
+      &::placeholder {
+        @add-mixin font 10px, 400, 10px, $strBlack;
+      }
+    }
+  }
+}

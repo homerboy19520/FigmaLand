@@ -1,0 +1,11 @@
+{% macro testimonial(img="", name="", content="", modifier ="") %}
+<div class="testimonial {{modifier}}">
+  <div class="testimonial__wrapper">
+    <img class="testimonial__icon" src="{{img}}" alt="woman" />
+  </div>
+  <div class="testimonial__box">
+    <h5 class="testimonial__name">{{name}}</h5>
+    <p class="testimonial__text">{{content}}</p>
+  </div>
+</div>
+{% endmacro %}
